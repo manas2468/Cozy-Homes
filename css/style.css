@@ -1,0 +1,280 @@
+/* --- Global Variables --- */
+:root {
+    --color-base: #FBF9F7;        /* Very Light Beige Background */
+    --color-text-dark: #333333;   /* Deep Charcoal for main text */
+    --color-text-light: #666666;  /* Muted Gray for secondary text */
+    --color-cta: #A87C6F;         /* Muted Terracotta/Clay for buttons */
+    --color-border: #E8E4E0;      /* Soft Light Gray for borders */
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Inter', Roboto, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-base);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: white;
+    border-bottom: 1px solid var(--color-border);
+    padding: 15px 0;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px; /* Increased padding */
+}
+
+.main-nav h1 {
+    font-family: var(--font-serif);
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--color-text-dark);
+}
+
+.nav-links a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--color-cta);
+}
+
+/* --- Footer --- */
+footer {
+    padding: 30px 40px;
+    text-align: center;
+    border-top: 1px solid var(--color-border);
+    margin-top: 50px;
+    font-size: 0.85em;
+    color: var(--color-text-light);
+}
+
+/* --- AUTH SPECIFIC STYLING (High-End Form) --- */
+
+.auth-form-container {
+    max-width: 420px; 
+    margin: 100px auto; /* More vertical space */
+    padding: 45px 50px; /* Generous internal padding */
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); /* Deeper, softer shadow */
+    text-align: center;
+}
+
+.auth-form-container h2 {
+    font-family: var(--font-serif);
+    font-size: 2.2em;
+    color: var(--color-text-dark);
+    margin-bottom: 35px;
+    font-weight: 400; /* Lighter weight for elegance */
+}
+
+.auth-form label {
+    display: block;
+    text-align: left;
+    margin-top: 20px; 
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    font-size: 0.9em;
+    text-transform: uppercase; /* Formal touch */
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 14px 15px; /* Thicker input for feel */
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: var(--color-base);
+}
+
+.auth-form input:focus {
+    border-color: var(--color-cta);
+    box-shadow: 0 0 0 1px var(--color-cta); /* Tight, focused glow */
+    outline: none;
+}
+
+.cta-button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-top: 35px; /* More space above button */
+    background-color: var(--color-cta);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.cta-button:hover {
+    background-color: #8c6a61; /* Slightly darker terracotta on hover */
+}
+
+.auth-form-container p {
+    margin-top: 25px;
+    font-size: 0.9em;
+    color: var(--color-text-light);
+}
+
+.auth-form-container a {
+    color: var(--color-cta);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+/* Error/Success Messages */
+.error-message {
+    color: white;
+    background-color: #d85757; /* Muted Red for error */
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.success-message {
+    color: white;
+    background-color: #559c55; /* Muted Green for success */
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* --- Checkout Layout & Header --- */
+.checkout-step-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.step-header h1 {
+    font-size: 2em;
+    color: #333;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.step-header p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* --- Form Elements --- */
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #A0C8A0; /* Light green highlight on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(160, 200, 160, 0.5);
+}
+
+/* --- Multi-Column Layout (City, State, Zip) --- */
+.form-row {
+    display: flex;
+    gap: 20px; /* Space between columns */
+    margin-bottom: 20px;
+}
+
+.form-row .form-group {
+    flex-grow: 1; /* Allows groups to take up space */
+}
+
+/* Specific width adjustments for the smaller fields */
+.form-row .quarter-width {
+    flex-basis: 25%;
+    min-width: 100px;
+}
+
+.form-row .half-width {
+    flex-basis: 50%;
+}
+
+
+/* --- Actions and Buttons --- */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.back-link {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #333;
+}
+
+/* CTA Button Styling (using a slightly warmer, cozy color palette) */
+.cta-button {
+    background-color: #5D8C5D; /* Cozy Green/Sage */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #4C724C; /* Darker green on hover */
+}
